@@ -20,3 +20,7 @@
 SENDGRID_USERNAME: Your_Username
 SENDGRID_PASSWORD: Your_Password
 DOMAIN_NAME: example.com
+
+fq_key: ""
+fq_secret: ""
+fq_api_version: '20140226'

@@ -79,6 +79,11 @@ GEM
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
+    draper (1.4.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
     erubis (2.7.0)
     execjs (2.4.0)
     factory_girl (4.5.0)
@@ -88,9 +93,19 @@ GEM
       railties (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.9.1)
+      faraday (>= 0.7.4, < 0.10)
     ffi (1.9.6)
     figaro (1.1.0)
       thor (~> 0.14)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
+    foursquare2 (2.0.1)
+      faraday (~> 0.8)
+      faraday_middleware (>= 0.8)
+      hashie (>= 1.0, < 3.0.0)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     haml (4.0.6)
@@ -101,6 +116,7 @@ GEM
       haml (>= 3.1, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    hashie (2.1.2)
     high_voltage (2.2.1)
     hike (1.2.3)
     html2haml (2.0.0)
@@ -118,7 +134,12 @@ GEM
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (5.0.3)
+      railties (>= 3.2.16)
     json (1.8.2)
+    kaminari (0.16.3)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     loofah (2.0.1)
@@ -130,7 +151,9 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.11.0)
+    multipart-post (2.0.0)
     mysql2 (0.3.18)
+    nested_form (0.3.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     parser (2.2.0.3)
@@ -148,6 +171,9 @@ GEM
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.0)
+    rack-pjax (0.8.0)
+      nokogiri (~> 1.5)
+      rack (~> 1.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.0)
@@ -172,6 +198,20 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
+    rails_admin (0.6.6)
+      builder (~> 3.1)
+      coffee-rails (~> 4.0)
+      font-awesome-rails (>= 3.0, < 5)
+      haml (~> 4.0)
+      jquery-rails (>= 3.0, < 5)
+      jquery-ui-rails (~> 5.0)
+      kaminari (~> 0.14)
+      nested_form (~> 0.3)
+      rack-pjax (~> 0.7)
+      rails (~> 4.0)
+      remotipart (~> 1.0)
+      safe_yaml (~> 1.0)
+      sass-rails (>= 4.0, < 6)
     rails_layout (1.0.25)
     rails_serve_static_assets (0.0.4)
     rails_stdout_logging (0.0.3)
@@ -182,6 +222,10 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
     rake (10.4.2)
+    remotipart (1.2.1)
+    request_store (1.1.0)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     rspec-core (3.2.1)
       rspec-support (~> 3.2.0)
     rspec-expectations (3.2.0)
@@ -209,6 +253,7 @@ GEM
     ruby_parser (3.6.4)
       sexp_processor (~> 4.1)
     rubyzip (1.1.7)
+    safe_yaml (1.0.4)
     sass (3.4.13)
     sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -268,15 +313,18 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.1.0)
   database_cleaner
+  draper
   factory_girl_rails
   faker
   figaro (>= 1.0.0.rc1)
+  foursquare2
   haml-rails
   high_voltage
   html2haml
   hub
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   launchy
   mysql2
   pry-rails
@@ -284,7 +332,9 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.2.0)
   rails_12factor
+  rails_admin
   rails_layout
+  responders (~> 2.0)
   rspec-rails
   rubocop
   sass-rails (~> 5.0)

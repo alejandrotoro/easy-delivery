@@ -1,23 +1,256 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%d/%m/%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+      days: "%A %d de %B"
+      months: "%B de %Y"
+    day_names:
+      - Domingo
+      - Lunes
+      - Martes
+      - Miércoles
+      - Jueves
+      - Viernes
+      - Sábado
+    abbr_day_names:
+      - Dom
+      - Lun
+      - Mar
+      - Mie
+      - Jue
+      - Vie
+      - Sab
+    month_names:
+      - ~
+      - Enero
+      - Febrero
+      - Marzo
+      - Abril
+      - Mayo
+      - Junio
+      - Julio
+      - Agosto
+      - Septiembre
+      - Octubre
+      - Noviembre
+      - Diciembre
+    abbr_month_names:
+      - ~
+      - Ene
+      - Feb
+      - Mar
+      - Abr
+      - May
+      - Jun
+      - Jul
+      - Ago
+      - Sep
+      - Oct
+      - Nov
+      - Dic
+    order:
+      - :month
+      - :day
+      - :year
+  time:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%d/%m/%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+      days: "%A %d de %B"
+      months: "%B de %Y"
+    day_names:
+      - Domingo
+      - Lunes
+      - Martes
+      - Miércoles
+      - Jueves
+      - Viernes
+      - Sábado
+    abbr_day_names:
+      - Dom
+      - Lun
+      - Mar
+      - Mie
+      - Jue
+      - Vie
+      - Sab
+    month_names:
+      - ~
+      - Enero
+      - Febrero
+      - Marzo
+      - Abril
+      - Mayo
+      - Junio
+      - Julio
+      - Agosto
+      - Septiembre
+      - Octubre
+      - Noviembre
+      - Diciembre
+    abbr_month_names:
+      - ~
+      - Ene
+      - Feb
+      - Mar
+      - Abr
+      - May
+      - Jun
+      - Jul
+      - Ago
+      - Sep
+      - Oct
+      - Nov
+      - Dic
+    order:
+      - :month
+      - :day
+      - :year
   hello: "Hello world"
+  views:
+    pagination:
+      previous: "&lt; Anterior"
+      next: "Siguiente &gt;"
+      truncate: "..."
+      first: "Primera"
+      last: "Última"
+  admin:
+    home:
+      name: "Volver"
+    pagination:
+      previous: "&laquo; Anterior"
+      next: "Siguiente &raquo;"
+      truncate: "…"
+    misc:
+      filter_date_format: "dd/mm/yy" # a combination of 'dd', 'mm' and 'yy' with any delimiter. No other interpolation will be done!
+      search: "Buscar"
+      filter: "Filtrar"
+      refresh: "Actualizar"
+      show_all: "Mostrar todo"
+      add_filter: "Añadir filtro"
+      bulk_menu_title: "Elementos seleccionados"
+      remove: "Borrar"
+      add_new: "Añadir nuevo/a"
+      chosen: "%{name} seleccionado/a"
+      chose_all: "Seleccionar todos/as"
+      clear_all: "Deseleccionar todos/as"
+      up: "Subir"
+      down: "Bajar"
+      navigation: "Navegación"
+      log_out: "Desconectarse"
+      ago: "atrás"
+    flash:
+      successful: "%{name} %{action} exitosamente"
+      error: "%{name} no ha podido ser %{action}"
+      noaction: "No se realizó ninguna acción"
+      model_not_found: "El modelo '%{model}' no pudo ser encontrado"
+      object_not_found: "%{model} con id '%{id}' no pudo ser encontrado"
+    table_headers:
+      model_name: "Nombre del modelo"
+      last_used: "Última utilización"
+      records: "Registros"
+      username: "Nombre de usuario"
+      changes: "Cambios"
+      created_at: "Fecha/Hora"
+      item: "Elemento"
+      message: "Mensaje"
+    actions:
+      dashboard:
+        title: "Administración del sitio"
+        menu: "Inicio"
+        breadcrumb: "Inicio"
+      index:
+        title: "Lista de %{model_label_plural}"
+        menu: "Lista"
+        breadcrumb: "%{model_label_plural}"
+      show:
+        title: "Detalles del/de la %{model_label} '%{object_label}'"
+        menu: "Mostrar"
+        breadcrumb: "%{object_label}"
+      show_in_app:
+        menu: "Mostrar en la aplicación"
+      new:
+        title: "Nuevo/a %{model_label}"
+        menu: "Añadir nuevo/a"
+        breadcrumb: "Nuevo/a"
+        link: "Añadir un/a nuevo/a %{model_label}"
+        done: "creado/a"
+      edit:
+        title: "Editar %{model_label} '%{object_label}'"
+        menu: "Editar"
+        breadcrumb: "Editar"
+        link: "Editar este/a %{model_label}"
+        done: "modificado/a"
+      delete:
+        title: "Borrar %{model_label} '%{object_label}'"
+        menu: "Borrar"
+        breadcrumb: "Borrar"
+        link: "Borrar '%{object_label}'"
+        done: "eliminado/a"
+      bulk_delete:
+        title: "Borrar %{model_label_plural}"
+        menu: "Borrado múltiple"
+        breadcrumb: "Borrado múltiple"
+        bulk_link: "Borrar %{model_label_plural} seleccionados/as"
+      export:
+        title: "Exportar %{model_label_plural}"
+        menu: "Exportar"
+        breadcrumb: "Exportar"
+        link: "Exportar %{model_label_plural} encontrados/as"
+        bulk_link: "Exportar %{model_label_plural} seleccionados/as"
+        done: "exportos/as"
+      history_index:
+        title: "Historia de %{model_label_plural}"
+        menu: "Historia"
+        breadcrumb: "Historia"
+      history_show:
+        title: "Historia del/de la %{model_label} '%{object_label}'"
+        menu: "Historia"
+        breadcrumb: "Historia"
+    form:
+      cancel: "Cancelar"
+      basic_info: "Información básica"
+      required: "Obligatorio/a"
+      optional: "Opcional"
+      one_char: "carácter"
+      char_length_up_to: "largo máximo de"
+      char_length_of: "largo de"
+      save: "Guardar"
+      save_and_add_another: "Guardar y añadir otro/a"
+      save_and_edit: "Guardar y editar"
+      all_of_the_following_related_items_will_be_deleted: "? Los siguientes elementos relacionados podrían ser borrados o quedar huérfanos:"
+      are_you_sure_you_want_to_delete_the_object: "Está seguro que quiere borrar este/a %{model_name}"
+      confirmation: "Sí, estoy seguro"
+      bulk_delete: "Los siguientes elementos serán borrados, lo que podría borrar o dejar huérfanas algunas de sus dependencias relacionadas:"
+      new_model: "%{name} (nuevo/a)"
+    export:
+      confirmation: "Exportar a %{name}"
+      select: "Seleccionar campos para exportar"
+      fields_from: "Campos de %{name}"
+      fields_from_associated: "Campos de %{name} asociado/a"
+      display: "Mostrar %{name}: %{type}"
+      options_for: "Opciones para %{name}"
+      empty_value_for_associated_objects: "<vacío/a>"
+      click_to_reverse_selection: 'Hacer click para revertir la selección'
+      csv:
+        header_for_root_methods: "%{name}" # 'model' is available
+        header_for_association_methods: "%{name} [%{association}]"
+        encoding_to: "Encodear para"
+        encoding_to_help: "Escoger el encodeado del archivo. Dejar en blanco para conservar el encodeado por defecto: (%{name})"
+        skip_header: "Sin cabecera"
+        skip_header_help: "No emitir cabecera (sin descripción de campos)"
+        default_col_sep: ","
+        col_sep: "Separador de columnas"
+        col_sep_help: "Dejar en blanco para conservar el valor por defecto ('%{value}')" # value is default_col_sep
